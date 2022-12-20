@@ -2,7 +2,9 @@ import React from 'react'
 
 const Header = () => {
     return (
-      <div className="header-text">Crypto Portfolio</div>
+      <div className="header-text" >
+        Cryptracker
+      </div>
     ) 
   }
 

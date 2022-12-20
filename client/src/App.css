@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
 
 * {
   box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
 }
 
 #root {
@@ -15,6 +12,7 @@
   padding: 5px;
 }
 
+p,
 h1,
 h2,
 h3,
@@ -29,7 +27,8 @@ h1 {
   color: rgb(0, 0, 0);
   font-size: 2em;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-left: 15px;
 }
 
 h2 {
@@ -44,14 +43,13 @@ h3 {
   font-size: 0.9em;
   font-weight: 400;
   margin: 0px;
-  padding-bottom: 10px;
 }
 
 h4 {
   color: rgb(0, 0, 0);
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 2px;
   margin-bottom: 10px;
 }
 
@@ -69,53 +67,68 @@ ul {
 
 li {
   list-style: none;
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(175,175,175,1) 0%, rgb(245, 245, 245) 100%);
-  padding: 10px;
-  margin: 5px;
-  border-radius: 0px 0px 30px 30px;
 }
 
 .input_form  {
-  background-color: rgb(194, 248, 249);
+  background-color: rgb(233, 233, 233);
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 10px;
 }
 
+.numberInputs1 {
+  width: 49%;
+  margin-right: 1%;
+}
+
+.numberInputs2 {
+  width: 49%;
+  margin-left: 1%;
+}
+
+.input_form button {
+  padding: 10px;
+  margin: 0px;
+}
+
+.input_form hr {
+  height: 1px;
+  background-color: rgb(185, 185, 185);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+select,
 input {
-  background-color: rgb(22, 219, 222);
+  background-color: rgb(209, 209, 209);
   height: 30px;
-  width: 80%;
+  width: 100%;
   padding: 5px;
   border: none;
-  margin: 5px;
+  margin-bottom: 10px;
   border-radius: 4px;
 }
 
+select,
 ::placeholder {
-  color: white;
-  font-weight: 700;
+  color: rgb(90, 0, 96);
+  font-size: medium;
+  font-weight: 400;
 }
 
 button {
+  margin-left: 15px;
   cursor: pointer;
-  border: none;
+  border: solid 1px rgb(113, 113, 113);
+  margin-top: 10px;
   padding: 10px;
   font-size: medium;
   background-color: rgb(255, 255, 255);
 }
 
-.input_form {
-  display: none;
-}
-
-#trigger:checked + .input_form {
-  display: block;
-}
-
-.input_checkbox {
-  height: 15px;
+.buttons {
+  text-align: center;
 }
 
 .image {
@@ -124,29 +137,67 @@ button {
   padding-top: 3px;
   border-radius: 0px 0px 24px 24px;
   box-shadow: 0px 4px 13px -7px rgba(0,0,0,0.75);
+  margin-right: 20px;
 }
 
 .coin_name {
-  background-color: rgb(22, 219, 222);
-  margin-bottom: -18px;
+  display: flex;
+}
+
+.coin_name button {
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(237, 237, 237);
+  margin: 0px;
+  border: none;
+}
+
+.coin_details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(237, 237, 237);
+  height: 52px;
+  border-bottom: 1px solid rgb(255, 255, 255);;
 }
 
 .coin_image {
   height: 40px;
+  padding: 4px;
+}
+
+.investment {
+  background-color: rgb(242, 242, 242);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 1.5em;
 }
 
 .crypto_value {
-  background-color: rgb(241, 241, 241);
-  border-radius: 4  px;
+  font-family: 'Changa', sans-serif;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  background: rgb(90, 0, 96);
+}
+
+.crypto_value h4 {
+  color: white;
 }
 
 .header-text {
+  text-align: center;
   font-family: Lobster, Helvetica, sans-serif;
   color: rgb(0, 0, 0);
-  font-size: 4em;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(22,219,222,1) 0%, rgb(255, 255, 255) 100%);
-  height: 80px;
+  color: white;
+  font-size: 3.5em;
+  padding: 20px 0px 20px 0px;
+  background: rgb(90,0,96);
+  background: linear-gradient(0deg, rgba(90,0,96,1) 41%, rgba(58,1,62,1) 100%);
+  height: 115px;
 }
 
 label {
@@ -157,6 +208,103 @@ label {
 hr {
   height: 1px;
   background-color: rgb(225, 225, 225);
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: none;
+}
+
+footer {
+  text-align: center;
+}
+
+.add_portfolio {
+  display: flex;
+  align-items:flex-end;
+}
+
+.coin_content {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.current_value {
+  background-color: rgb(226, 226, 226);
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  font-size: 2.5em;
+}
+
+.total_values {
+  background-color: rgb(134, 51, 146);
+  color: white;
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  font-size: 1.5em;
+}
+
+.pl_values_green {
+  color: rgb(0, 164, 44);
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  font-size: 2.5em;
+}
+
+.pl_values_red {
+  color: rgb(164, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  font-size: 2.5em;
+}
+
+.profit_value_green {
+  color: rgb(255, 255, 255); 
+  background: rgb(0,196,21);
+  background: linear-gradient(0deg, rgba(0,124,13,1) 0%, rgba(0,196,21,1) 100%);
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.profit_value_red {
+  color: rgb(255, 255, 255);
+  background: rgb(196,0,0);
+  background: linear-gradient(0deg, rgba(196,0,0,1) 0%, rgba(255,0,0,1) 100%);
+  text-align: center;
+  font-family: 'Changa', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.value_label {
+  padding: 0px;
+  margin-bottom: 0px;
+  font-size: 0.7em;
+}
+
+.totals {
+  margin-top: 10px;
+}
+
+.coin_extra {
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 0.6em;
+  font-family: 'Changa', sans-serif;
+  font-size: 0.9em;
+  padding: 4px 15px;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: 0px 4px 13px -7px rgba(0,0,0,0.75);
 }
